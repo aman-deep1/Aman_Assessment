@@ -1,0 +1,1 @@
+Product emp= jdbcTemplate.queryForObject(selectSQL,new Object[] {productID}, new BeanPropertyRowMapper<>(Product.class));
