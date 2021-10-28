@@ -11,18 +11,19 @@
 
 
 
-def groovyUtils = new com.eviware.soapui.GroovyUtils(context)
-def holder =groovyUtils.getXmlHolder(messageExchange.responseContent)
- holder.namespace("ns1") = "http://tempuri.org/"
- 
-def addResult = holdr.getNodavalue("ns1:AddResult")
-log.info "Result is :" + addResult
- 
-if(addResult=="48")
+import com.eviware.soapui.support.XmlHolder
+
+
+
+respXmlHolder = new XmlHolder(messageExchange.getResponseContentAsXml())
+respXmlHolder.declareNamespace("ns1","http://tempuri.org/")
+CDATAXml = respXmlHolder.getNodeValue("//ns1:AddResult")
+log.info "Result is :" + CDATAXml
+if(CDATAXml=="48.0")
 {
-    log.info "Pass"
+log.info "Pass"
 }
 else
 {
-    log.info "Fail"
+log.info "Fail"
 }
