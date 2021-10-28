@@ -27,3 +27,18 @@ else
 {
 log.info "Fail"
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[12:09] Srikar Kalle
+import com.eviware.soapui.support.XmlHolderrespXmlHolder = new XmlHolder(messageExchange.getResponseContentAsXml())
+respXmlHolder.declareNamespace("ns1","http://tempuri.org/")
+CDATAXml = respXmlHolder.getNodeValue("//ns1:AddResult")
+log.info "Result is :" + CDATAXml
+if(CDATAXml=="48.0")
+{
+log.info "Pass"
+}
+else
+{
+log.info "Fail"
+}
