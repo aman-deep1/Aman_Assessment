@@ -1,0 +1,57 @@
+
+.card {
+    
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  
+  
+#can1{
+            
+    background-color: white;
+  
+}
+#can2{
+            
+    background-color: indigo;
+}
+#can3{
+            
+    background-color: blue;
+}
+#can4{
+            
+    background-color: green;
+}
+#can5{
+            
+    background-color: yellow;
+}
+#can6{
+            
+    background-color: orange;
+}
+#can7{
+            
+    background-color: red;
+}
